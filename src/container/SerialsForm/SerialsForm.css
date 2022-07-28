@@ -1,0 +1,54 @@
+.Form {
+    display: flex;
+}
+
+.Input {
+
+    border: 1px solid #ccc;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 190px;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 25px;
+    margin: 10px auto;
+    resize: none;
+    position: relative;
+}
+
+.Input::placeholder{
+    font-size: 12px;
+}
+
+.Serials {
+    position: absolute;
+    top: 67px;
+    right: 19px;
+    border-radius: 13px;
+    width: 350px;
+    overflow: hidden;
+}
+
+.ListSerials {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.Serial a{
+    text-decoration: none;
+}
+
+.Serial {
+    padding: 2px 10px;
+    border-bottom: 1px solid white;
+    background: white;
+}
+
+.Serial:hover {
+    background: #082a42;
+}
+
+
