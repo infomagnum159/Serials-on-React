@@ -12,14 +12,14 @@ const SerialsForm = () => {
 
     const searchSerials = async event => {
         const value = event.target.value;
-        const response = await axiosSerials.get(`${value}`);
+        const response = await axiosSerials(`${value}`);
         dispatch({type: CHANGE_INPUT_VALUE, value});
         dispatch({type: FETCH_SERIALS_REQUEST, value: response.data});
     };
 
     const getSeries = async id => {
         const value = '';
-        const response = await axiosSeries.get(`${id}`);
+        const response = await axiosSeries(`${id}`);
         dispatch({type: FETCH_SERIES_REQUEST, value: response.data});
         dispatch({type: CHANGE_INPUT_VALUE, value});
         dispatch({type: FETCH_SERIALS_REQUEST, value});

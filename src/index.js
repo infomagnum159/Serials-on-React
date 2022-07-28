@@ -9,11 +9,7 @@ import './index.css';
 import App from './App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const store = createStore(
-    reducer,
-    composeEnhancers(applyMiddleware(thunkMiddleware))
-);
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunkMiddleware)));
 
 const app = (
     <Provider store={store}>
@@ -23,4 +19,5 @@ const app = (
     </Provider>
 );
 
-ReactDOM.render(app, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(app);
